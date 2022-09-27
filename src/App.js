@@ -16,12 +16,15 @@ import MyReview from './pages/DashBoard/MyReview';
 import MyHistory from './pages/DashBoard/MyHistory';
 import AllUsers from './pages/DashBoard/AllUsers';
 import RequireAdmin from './pages/Login/RequireAdmin';
+import AddDoctores from './pages/DashBoard/AddDoctores';
+import ManageDoctor from './pages/DashBoard/ManageDoctor';
+import Payment from './pages/DashBoard/Payment';
 
 function App() {
   return (
-    <div >
+    <div  >
       <Navber />
-      <div className=''>
+      <div className='sm:min-w-sm mx-auto px-12' >
 
         <Routes >
           <Route path="/" element={<Home />}></Route>
@@ -49,12 +52,27 @@ function App() {
             <Route index element={<MyAppointment />}></Route>
             <Route path="review" element={<MyReview />}></Route>
             <Route path="history" element={<MyHistory />}></Route>
+            <Route path="payment/:id" element={<Payment />}></Route>
             <Route path="allusers" element={
               <RequireAdmin>
                 <AllUsers />
               </RequireAdmin>
 
             }></Route>
+            <Route path="doctor" element={
+              <RequireAdmin>
+                <AddDoctores />
+              </RequireAdmin>
+
+            }></Route>
+
+            <Route path="manage" element={
+              <RequireAdmin>
+                <ManageDoctor />
+              </RequireAdmin>
+
+            }></Route>
+
 
 
           </Route>

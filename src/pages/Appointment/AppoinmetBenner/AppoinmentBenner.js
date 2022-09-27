@@ -9,7 +9,7 @@ const AppoinmentBenner = ({ date, setDate }) => {
   <div className='text-black'>
    <div className="hero min-h-screen ">
     <div className="hero-content flex-col lg:flex-row-reverse">
-     <img src={chair} className="max-w-sm rounded-lg shadow-2xl" alt='chire' />
+     <img src={chair} className="w-96 rounded-lg shadow-2xl" alt='chire' />
      <div>
       <DayPicker
 
